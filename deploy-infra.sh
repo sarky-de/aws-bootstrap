@@ -1,7 +1,7 @@
 #!/bin/bash
 
 STACK_NAME=awsbootstrap 
-REGION=us-east-2
+REGION=us-east-1 
 CLI_PROFILE=awsbootstrap
 
 EC2_INSTANCE_TYPE=t2.micro 
@@ -15,5 +15,4 @@ aws cloudformation deploy \
   --template-file main.yml \
   --no-fail-on-empty-changeset \
   --capabilities CAPABILITY_NAMED_IAM \
-  --parameter-overrides \ 
-    EC2InstanceType=$EC2_INSTANCE_TYPE
+  --parameter-overrides EC2InstanceType=$EC2_INSTANCE_TYPE
